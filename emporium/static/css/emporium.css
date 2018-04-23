@@ -1,0 +1,47 @@
+h1 {
+    font: 30px "Trebuchet MS", Arial, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #85CECE;
+    border-bottom: 1px solid #B8DDFF;
+    margin: 20px -0px 15px;
+}
+
+textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 70%;
+    background: #C0E1FF;
+    }
+
+button{
+    padding: 10px 30px 10px 30px;
+    background: #F4C2CA;
+    border: none;
+    color: #FFF;
+    box-shadow: 1px 1px 1px #F4C2CA;
+    -webkit-box-shadow: 1px 1px 1px #F4C2CA;
+    -moz-box-shadow: 1px 1px 1px #F4C2CA;
+    text-shadow: 1px 1px 1px #F4C2CA;
+}
+
+body { font: 16px "Trebuchet MS", Arial, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #8585CE;
+    border-bottom: 1px solid #B8DDFF;
+    margin: 20px 20px 15px; 
+    padding-left: 15px;
+}
+
+form {font: 16px "Trebuchet MS", Arial, sans-serif;
+    padding: 10px 10px 10px 20px;
+    display: block;
+    background: #C0E1FF;
+    border-bottom: 1px solid #B8DDFF;
+    margin: 20px 20px 15px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Lobster', cursive;
+    }

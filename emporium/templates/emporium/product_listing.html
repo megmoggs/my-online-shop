@@ -1,15 +1,16 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>Emporium_Home</title>
-<link type="text/css" href="style2.css" rel="stylesheet">
+<link href="{% static 'css/emporium.css' %}" rel="stylesheet">
 </head>
 <body>
 <h1> Welcome to the Emporium!</h1>
 <h2>Please, browse our goods.</h2>
 <form method="POST" action="success.html" class="mySearch" name="mySearch">
 <div class="form-search-tool">
-    <label for="name"><strong>Search:</strong></label><br>
+    <label for="name">Search:</label><br>
     <input type="text" placeholder="Search for products" class="form-search tool" id="search" name="search1">
 </div>
 <h3>Navigational Menu</h3>
@@ -18,3 +19,16 @@
 	<li><a href = "Reviews.html">Customer Reviews</a></li>
 	<li><a href = "Checkout.html">Checkout</a></li>
 </ul>
+<div class="content container">
+	<div class="row">
+		<div class="col-md-8">
+			{% for post in posts %}
+			<div class="post">
+				<p>Published: {{post.published_date }}</p>
+			</div>
+			<h3><a href="">{{ post.title}}</a></h3>
+			<p> {{post.text|linebreaksbr}}</p>
+		</div>
+		{% endfor %}
+	</div>
+</div>
