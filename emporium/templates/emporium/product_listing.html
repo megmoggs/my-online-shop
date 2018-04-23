@@ -1,34 +1,13 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Emporium_Home</title>
-<link href="{% static 'css/emporium.css' %}" rel="stylesheet">
-</head>
-<body>
-<h1> Welcome to the Emporium!</h1>
-<h2>Please, browse our goods.</h2>
-<form method="POST" action="success.html" class="mySearch" name="mySearch">
-<div class="form-search-tool">
-    <label for="name">Search:</label><br>
-    <input type="text" placeholder="Search for products" class="form-search tool" id="search" name="search1">
-</div>
-<h3>Navigational Menu</h3>
-<ul>
-	<li><a href = "mainpage.html">Home</a></li>
-	<li><a href = "Reviews.html">Customer Reviews</a></li>
-	<li><a href = "Checkout.html">Checkout</a></li>
-</ul>
-<div class="content container">
-	<div class="row">
-		<div class="col-md-8">
-			{% for post in posts %}
-			<div class="post">
-				<p>Published: {{post.published_date }}</p>
+{% extends 'emporium/base.html' %}
+
+{% block content %}
+	{% for post in posts %}
+		<div class="post">
+			<div class="date">
+				{{post.published_date }}
 			</div>
-			<h3><a href="">{{ post.title}}</a></h3>
+			<h1><a href="{% url 'post_detail' pk=post.pk %}"</a></h1>
 			<p> {{post.text|linebreaksbr}}</p>
 		</div>
-		{% endfor %}
-	</div>
-</div>
+	{% endfor %}
+{% endblock %}	
